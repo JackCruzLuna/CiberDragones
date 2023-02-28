@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+
+  <title>Registro</title>
+
+</head>
+<style>
+  .gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #d49f5f;
+
+
+  }
+
+
+  @media (min-width: 768px) {
+    .gradient-form {
+      height: 100vh !important;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .gradient-custom-2 {
+      border-top-right-radius: .3rem;
+      border-bottom-right-radius: .3rem;
+    }
+  }
+  
+</style>
+
+<body>
+  <div class="container-fluid ">
+    <div class="row ">
+      <div class="col-12 md-6 p-5 " style="background-color: rgb(255, 255, 255); text-align: center; ">
+
+
+        <div class="row ">
+          <div class="col-12 md-6 p-5 " style="background-color: rgb(245, 152, 12); text-align: center; ">
+            <div class="card bg-glass">
+              <div class="card-body  px-md-5 p-5">
+
+                <img src="logos/SVG/LOGO_TUVSA.svg" class="img-fluid animate__animated animate__heartBeat"  alt="logoTuvsa" style="width: 400px;">
+              </div>
+              <br>
+              <form action="larespuesta.php" method="post">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="usuario" placeholder="Usuario">
+                  <label for="floatingInput">Usuario</label>
+
+                  <div class="form-floating">
+                      <input type="password" class="form-control" name="password"
+                          placeholder="Contraseña">
+                      <label for="floatingPassword">Contraseña</label>
+                  </div>
+              </div>
+                <button type="submit" class="btn btn-outline-danger">Registrar</button>
+              </form>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
