@@ -1,3 +1,13 @@
+<?php
+error_reporting(E_ALL ^ E_DEPRECATED);
+header("Content-Type: text/html; Charset=UTF-8");
+
+session_start();
+session_destroy();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,15 +37,16 @@
                     <div class="card mx-auto bg-light shadow" style="width: 30rem;text-align: left;">
 
                         <div class="card-body " style="background-color:rgb(208, 208, 208) ;">
-                            <form>
+                            
+                            <form action="login.php" method="post">
                                 <div class="mb-3">
                                     <label class="form-label">Correo electronico</label>
-                                    <input type="email" class="form-control">
+                                    <input type="email" class="form-control" name="email">
 
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control">
+                                    <input type="password" class="form-control" name="password">
                                 </div>
                                
                                 <button type="submit" class="btn btn-outline-dark btn-lg form-control">Entrar</button>
