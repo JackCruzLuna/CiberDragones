@@ -22,7 +22,7 @@ if ($correoDos== $email) {
 	<script> window.location="login.html" </script>
 	'; 
 	}else{
-		$csDos = $con -> query("INSERT INTO login (nombre,apaterno,amaterno,email,password VALUES ('$nombre', '$apaterno','$amaterno', '$email','$password')");
+		$csDos = $con -> query("INSERT INTO login (nombre,apaterno,amaterno,email,password) VALUES ('$nombre', '$apaterno','$amaterno', '$email','$password')");
 		echo '<script> alert("DATOS REGISTRADOS "); </script>
 		<script> window.location="login.html" </script>
 		';
