@@ -1,3 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/sweetalert2@11.js"></script>
+</body>
+</html>
+
+
+
+
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
 header("Content-Type: text/html; Charset=UTF-8");
@@ -31,14 +50,24 @@ if ($correo == $email) {
 	if ($correo == $email && $passwordDos == $password) {
 		echo '<script>window.location="index.php"</script>';
 	}else{
-		echo '<script>alert(" Correo o Contraseña incorrecto")</script>';
-		echo '<script>window.location="log.php"</script>';
-	}
-}else{
-	echo '<script>alert("Usuario no registrado")</script>';
-	echo '<script>window.location="registro.html"</script>';
+		echo '
+        <script>
+        Swal.fire({
+        title: "Correo o Contraseña Incorrecto"",
+	}).then((result) => {
+		window.location="log.php"
+	})
+	</script>';
 }
+}else{
+echo '
+<script>
+Swal.fire({
+	title: "Usuario no Registrado",
+}).then((result) => {
+		window.location="registro.html"
+})
+</script>';
+}
+
 ?>
-
-
- 
